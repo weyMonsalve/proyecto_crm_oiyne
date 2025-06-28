@@ -8,4 +8,4 @@ router.get('/', listarUsuarios);
 //Ruta para registrar usuarios
 router.post('/', registrarUsuario);
 
-module.exports = router;
+module.exports = router;    
