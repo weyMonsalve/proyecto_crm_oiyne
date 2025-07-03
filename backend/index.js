@@ -8,6 +8,7 @@ require('dotenv').config();  //carga variables de entorno desde .env
 const usuarioRoutes = require('./routes/usuarioRoutes')
 const loginRoutes = require('./routes/loginRoutes')
 const clienteRoutes = require('./routes/clienteRoutes');
+const productosRoutes = require('./routes/productosRoutes');
 
 //Configuracion inicial
 const app = express();
@@ -30,7 +31,8 @@ app.get('/', (req, res) => {
 //Uso de rutas
 app.use('/api/usuarios', usuarioRoutes);  // Ruta para usuarios
 app.use('/api/login', loginRoutes);   //Ruta para login
-app.use('/api/clientes', clienteRoutes)   //Ruta para clientes
+app.use('/api/clientes', clienteRoutes);   //Ruta para clientes
+app.use('/api/productos', productosRoutes);   //Ruta para productos
 
 //Servidor
 const PORT = process.env.PORT || 3001;
